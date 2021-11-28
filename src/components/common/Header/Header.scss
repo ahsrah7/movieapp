@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  margin-left: 1.5rem;
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    border-right: 10px solid #fefefe;
+    margin: 1rem 0;
+    height: 48px;
+  }
+  &__back-arrow {
+    color: #fefefe;
+    align-self: center;
+  }
+  &__spacer {
+    flex: 1;
+  }
+  &__title {
+    color: #fefefe;
+    font-weight: 500;
+    font-size: 14px;
+    align-self: center;
+    padding-right: 2rem;
+  }
+}

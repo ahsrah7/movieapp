@@ -1,0 +1,9 @@
+.user-icon {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  &__icon {
+    width: 30%;
+    margin: auto;
+  }
+}

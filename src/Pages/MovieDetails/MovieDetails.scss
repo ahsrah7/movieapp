@@ -1,0 +1,100 @@
+.movie-detail {
+  width: 100%;
+  background-color: #4b4b4d;
+  height: 100%;
+  overflow-y: scroll;
+  &__nav {
+    height: 48px;
+    width: 100%;
+    background-color: #e2112e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+.nav {
+  display: flex;
+
+  &__title {
+    color: #fefefe;
+    padding: 0.5rem 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  &__icon {
+    // float: right;
+    height: 32px;
+    width: 32px;
+    padding: 0.5rem 0;
+  }
+}
+
+.img-slider {
+  height: 40%;
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.details {
+  color: #fefefe;
+  padding: 3rem 1.5rem;
+  &__title {
+    font-size: 24px;
+  }
+  &__director {
+    padding-top: 1rem;
+    &--label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    &--value {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  &__description {
+    font-size: 10px;
+    font-style: italic;
+  }
+  &__review {
+    font-size: 16px;
+    padding-bottom: 1rem;
+    &--link {
+      color: #fefefe;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  &__item {
+    width: 15%;
+    font-style: italic;
+    font-size: 8px;
+    &--no-style {
+      list-style: none;
+      @extend .info__item;
+    }
+  }
+}
+
+.book-now {
+  display: flex;
+  justify-content: center;
+  &__button {
+    width: fit-content;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: #e2112e;
+    color: #fefefe;
+  }
+}

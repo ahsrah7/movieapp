@@ -1,0 +1,36 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/formBackground.jpg),
+    linear-gradient(
+      to top,
+      rgba(226, 17, 46, 0.5) 0%,
+      rgba(226, 17, 46, 1) 50% 100%
+    );
+  background-blend-mode: luminosity;
+  background-position: bottom;
+  &__title {
+    display: flex;
+    justify-content: center;
+    color: #fefefe;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    color: #fefefe;
+    font-size: 8px;
+    padding-top: 0.5rem;
+  }
+  &__redirect-link {
+    color: #fefefe;
+    font-size: 8px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}

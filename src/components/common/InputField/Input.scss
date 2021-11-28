@@ -1,0 +1,55 @@
+.field {
+  padding: 0.2rem 0;
+  display: flex;
+  flex-direction: row;
+  &__icon {
+    height: auto;
+    width: 20px;
+    color: #fefefe;
+    padding: 0 1rem 0 0;
+  }
+  &__input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #fefefe;
+    padding-bottom: 0.5rem;
+    color: #fefefe;
+    font-size: 10px;
+    font-family: "Open Sans";
+    position: relative;
+    &::placeholder {
+      color: #fefefe;
+    }
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #fefefe;
+    }
+    &[type="date"]::-webkit-calendar-picker-indicator {
+      background: transparent;
+      bottom: 0;
+      color: transparent;
+      cursor: pointer;
+      height: auto;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
+    }
+  }
+  &__error-text {
+    height: 22px;
+    color: white;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+}
