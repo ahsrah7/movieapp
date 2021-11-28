@@ -6,9 +6,9 @@ import Header from "../../components/common/Header/Header";
 import Form from "../../components/module/Form/Form";
 import { registrationFormfields } from "../../dataObjects/RegistrationForm";
 import { VALIDATIONREGEX as validate } from "../../dataObjects/inputValidation";
-
-
+import { useNavigate } from "react-router-dom";
 const RegistrationForm = ()=>{
+  const navigate = useNavigate()
     const [formValue, setFormValue] = useState(
         registrationFormfields.reduce((acc, field) => {
           return { ...acc, [field.name]: "" };
@@ -36,8 +36,11 @@ const RegistrationForm = ()=>{
       };
 
   const handleSubmit = (e) => {
-      e.preventDefault();
+      e.preventDefault();      
       setErrorMsg(validator(formValue));
+      if(Object.keys(validator(formValue)).length == 0 ){
+        navigate("/my-movie")
+    }
     };
 
   return ( 

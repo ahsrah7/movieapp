@@ -76,7 +76,7 @@
   margin: 0;
   padding: 0;
   &__item {
-    width: 15%;
+    padding-right: 2rem;
     font-style: italic;
     font-size: 8px;
     &--no-style {
@@ -96,5 +96,6 @@
     border: none;
     background-color: #e2112e;
     color: #fefefe;
+    cursor: pointer;
   }
 }

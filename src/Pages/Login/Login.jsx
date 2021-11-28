@@ -6,9 +6,10 @@ import UserIcon from "../../components/common/UserIcon/UserIcon";
 import Form from "../../components/module/Form/Form";
 import { loginFields } from "../../dataObjects/RegistrationForm";
 import { LOGINREGEX as validate } from "../../dataObjects/inputValidation";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Login =()=>{
+    let navigate = useNavigate();
     const [formValue, setFormValue] = useState(
         loginFields.reduce((acc, field) => {
           return { ...acc, [field.name]: "" };
@@ -38,11 +39,15 @@ const Login =()=>{
   const handleSubmit = (e) => {
       e.preventDefault();
       setErrorMsg(validator(formValue));
+      if(Object.keys(validator(formValue)).length == 0 ){
+          navigate("/my-movie")
+      }
     };
     return (
         <div className="login">
             <div>
-            <Header text="Login" />
+          <Header text="Login" />
+            
             <UserIcon src={user} altText="userIcon" />
             <div className="login__title">MY MOVIE</div>
             </div>
@@ -55,7 +60,7 @@ const Login =()=>{
             setFormValue={setFormValue}
             buttontext="LOGIN"
             />
-            <div className="login__text">Don't have an account? <Link className="login__redirect-link" to="/">Sign Up</Link></div>
+            <div className="login__text">Don't have an account? <Link className="login__redirect-link" to="/register">Sign Up</Link></div>
             </div>
         </div>
     )

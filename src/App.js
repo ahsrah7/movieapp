@@ -6,7 +6,7 @@ import Movie from "./Pages/movie/Movie";
 import MovieDetails from "./Pages/MovieDetails/MovieDetails";
 function App() {
   return (
-    <div style={{ height: "100%" }}>
+    <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
